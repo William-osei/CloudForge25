@@ -1,141 +1,209 @@
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Epic cloud gradient -->
-    <radialGradient id="cloudMaster" cx="30%" cy="20%" r="80%">
-      <stop offset="0%" style="stop-color:#E0F2FE;stop-opacity:0.9" />
-      <stop offset="30%" style="stop-color:#7DD3FC;stop-opacity:0.8" />
-      <stop offset="70%" style="stop-color:#0EA5E9;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#0284C7;stop-opacity:1" />
+    <!-- GODLIKE cloud gradient -->
+    <radialGradient id="cloudMaster" cx="35%" cy="25%" r="85%">
+      <stop offset="0%" style="stop-color:#F0F9FF;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#E0F2FE;stop-opacity:0.95" />
+      <stop offset="40%" style="stop-color:#7DD3FC;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#0EA5E9;stop-opacity:0.95" />
+      <stop offset="90%" style="stop-color:#0284C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369A1;stop-opacity:1" />
     </radialGradient>
     
-    <!-- Forge anvil gradient -->
+    <!-- Cloud secondary layer -->
+    <radialGradient id="cloudSecondary" cx="60%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#DBEAFE;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#93C5FD;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <!-- LEGENDARY anvil gradient -->
     <linearGradient id="anvilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#71717A;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#52525B;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3F3F46;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#9CA3AF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#71717A;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#52525B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Hammer gradient -->
+    <!-- Anvil highlight -->
+    <linearGradient id="anvilHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F3F4F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D1D5DB;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- EPIC hammer gradient -->
     <linearGradient id="hammerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#B91C1C;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#FCA5A5;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#EF4444;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Spark gradient -->
-    <radialGradient id="sparkGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#FEF08A;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#F59E0B;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0.8" />
+    <!-- Handle gradient -->
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- DIVINE spark gradient -->
+    <radialGradient id="sparkGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" style="stop-color:#FFFBEB;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FEF08A;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:0.9" />
     </radialGradient>
     
-    <!-- Epic shadow filter -->
+    <!-- LEGENDARY shadow filter -->
     <filter id="epicShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+      <feDropShadow dx="6" dy="12" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#1E40AF" flood-opacity="0.2"/>
     </filter>
     
-    <!-- Glow filter -->
+    <!-- DIVINE glow filter -->
     <filter id="forgeGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge> 
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/> 
       </feMerge>
     </filter>
     
-    <!-- Lightning effect -->
+    <!-- GODLIKE lightning effect -->
     <filter id="lightning" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feColorMatrix in="blur" type="saturate" values="3"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="saturate" values="4"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0 .5 .5 .7 .7 .9 1"/>
+      </feComponentTransfer>
     </filter>
-  </defs>
+    
+    <!-- MYSTICAL energy filter -->
+    <filter id="energy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="energy"/>
+      <feColorMatrix in="energy" type="hueRotate" values="180"/>
+    </filter>
   
-  <!-- Majestic cloud formation -->
+  <!-- MAJESTIC CLOUD FORMATION with divine layers -->
   <g filter="url(#epicShadow)">
-    <path d="M96 64c8 0 14-6 14-14s-6-14-14-14c-1-12-10-22-22-22-8 0-15 4-19 10C52 22 48 20 44 20c-10 0-18 8-18 18 0 3 1 6 2 8C25 48 22 52 22 58c0 8 6 14 14 14h60z" fill="url(#cloudMaster)"/>
+    <!-- Main cloud body -->
+    <path d="M192 128c16 0 28-12 28-28s-12-28-28-28c-2-24-20-44-44-44-16 0-30 8-38 20C104 44 96 40 88 40c-20 0-36 16-36 36 0 6 2 12 4 16C50 96 44 104 44 116c0 16 12 28 28 28h120z" fill="url(#cloudMaster)"/>
     
-    <!-- Cloud layers for depth -->
-    <path d="M88 58c6 0 10-4 10-10s-4-10-10-10c-0.5-8-7-14-15-14-5 0-10 3-12 7C58 30 55 29 53 29c-7 0-12 5-12 12 0 2 0 4 1 5C40 47 38 50 38 54c0 5 4 9 9 9h41z" fill="url(#cloudMaster)" opacity="0.6"/>
+    <!-- Secondary cloud layer for incredible depth -->
+    <path d="M176 116c12 0 20-8 20-20s-8-20-20-20c-1-16-14-28-30-28-10 0-20 6-24 14C116 60 110 58 106 58c-14 0-24 10-24 24 0 4 0 8 2 10C80 94 76 100 76 108c0 10 8 18 18 18h82z" fill="url(#cloudSecondary)"/>
+    
+    <!-- Tertiary cloud wisp -->
+    <path d="M160 100c8 0 14-6 14-14s-6-14-14-14c-0.5-10-8-18-18-18-6 0-12 3-15 8C122 61 118 60 116 60c-8 0-14 6-14 14 0 2 0 4 1 6C101 81 99 84 99 88c0 6 4 10 10 10h51z" fill="url(#cloudMaster)" opacity="0.4"/>
   </g>
   
-  <!-- LEGENDARY ANVIL - The centerpiece -->
-  <g transform="translate(64, 85)" filter="url(#forgeGlow)">
-    <!-- Anvil base -->
-    <ellipse cx="0" cy="15" rx="20" ry="8" fill="url(#anvilGrad)"/>
-    <!-- Anvil body -->
-    <rect x="-18" y="-5" width="36" height="20" rx="4" fill="url(#anvilGrad)"/>
-    <!-- Anvil horn -->
-    <path d="M18,-5 L28,-2 L28,8 L18,15 Z" fill="url(#anvilGrad)"/>
-    <!-- Anvil face (where the magic happens) -->
-    <rect x="-15" y="-8" width="30" height="3" rx="1" fill="#E5E7EB"/>
+  <!-- LEGENDARY ANVIL - Enhanced centerpiece -->
+  <g transform="translate(128, 170)" filter="url(#forgeGlow)">
+    <!-- Anvil shadow base -->
+    <ellipse cx="0" cy="30" rx="40" ry="16" fill="url(#anvilGrad)" opacity="0.8"/>
+    <!-- Anvil main body -->
+    <rect x="-36" y="-10" width="72" height="40" rx="8" fill="url(#anvilGrad)"/>
+    <!-- Anvil horn (extended) -->
+    <path d="M36,-10 L56,-4 L56,16 L36,30 Z" fill="url(#anvilGrad)"/>
+    <!-- Anvil hardy hole -->
+    <circle cx="20" cy="8" r="3" fill="#374151"/>
+    <!-- Anvil striking face (where magic happens) -->
+    <rect x="-30" y="-16" width="60" height="6" rx="2" fill="url(#anvilHighlight)"/>
+    <!-- Anvil edge detail -->
+    <rect x="-32" y="-10" width="4" height="30" rx="2" fill="url(#anvilHighlight)" opacity="0.6"/>
   </g>
   
-  <!-- EPIC HAMMER in motion -->
-  <g transform="translate(45, 60) rotate(-25)" filter="url(#forgeGlow)">
-    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-25 0 0; -15 0 0; -25 0 0" dur="0.8s" repeatCount="indefinite"/>
-    <!-- Hammer handle -->
-    <rect x="-2" y="10" width="4" height="25" rx="2" fill="#8B4513"/>
-    <!-- Hammer head -->
-    <rect x="-8" y="8" width="16" height="8" rx="2" fill="url(#hammerGrad)"/>
-    <!-- Handle grip -->
-    <rect x="-3" y="30" width="6" height="3" rx="1" fill="#A0522D"/>
+  <!-- GODLIKE HAMMER with enhanced motion -->
+  <g transform="translate(90, 120) rotate(-25)" filter="url(#forgeGlow)">
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-25 0 0; -10 0 0; -25 0 0" dur="0.6s" repeatCount="indefinite"/>
+    <!-- Hammer handle (realistic wood grain) -->
+    <rect x="-4" y="20" width="8" height="50" rx="4" fill="url(#handleGrad)"/>
+    <!-- Handle bands -->
+    <rect x="-5" y="35" width="10" height="2" rx="1" fill="#654321"/>
+    <rect x="-5" y="55" width="10" height="2" rx="1" fill="#654321"/>
+    <!-- Hammer head (detailed) -->
+    <rect x="-16" y="16" width="32" height="16" rx="4" fill="url(#hammerGrad)"/>
+    <!-- Hammer face detail -->
+    <rect x="-14" y="18" width="28" height="2" rx="1" fill="#FCA5A5" opacity="0.8"/>
+    <!-- Handle end grip -->
+    <ellipse cx="0" cy="75" rx="6" ry="4" fill="#A0522D"/>
   </g>
   
-  <!-- EXPLOSIVE FORGE SPARKS -->
-  <g opacity="0.9">
-    <!-- Major sparks -->
-    <circle cx="75" cy="75" r="3" fill="url(#sparkGrad)" filter="url(#lightning)">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="0.6s" repeatCount="indefinite"/>
+  <!-- EXPLOSIVE FORGE SPARKS - Enhanced -->
+  <g opacity="0.95">
+    <!-- Major divine sparks -->
+    <circle cx="150" cy="150" r="6" fill="url(#sparkGrad)" filter="url(#lightning)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="0.5s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="55" cy="82" r="2.5" fill="url(#sparkGrad)" filter="url(#lightning)">
-      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="0.9s" repeatCount="indefinite"/>
+    <circle cx="110" cy="164" r="5" fill="url(#sparkGrad)" filter="url(#lightning)">
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="0.8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="68" cy="88" r="2" fill="url(#sparkGrad)" filter="url(#lightning)">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="0.7s" repeatCount="indefinite"/>
+    <circle cx="136" cy="176" r="4" fill="url(#sparkGrad)" filter="url(#lightning)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="0.6s" repeatCount="indefinite"/>
     </circle>
     
-    <!-- Micro sparks for detail -->
-    <circle cx="58" cy="75" r="1" fill="#FEF08A">
-      <animate attributeName="opacity" values="0;1;0" dur="0.4s" repeatCount="indefinite"/>
+    <!-- Medium sparks -->
+    <circle cx="125" cy="155" r="3" fill="url(#sparkGrad)" filter="url(#lightning)">
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="0.7s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="72" cy="82" r="1.5" fill="#FCD34D">
-      <animate attributeName="opacity" values="0.1;0.8;0.1" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="145" cy="165" r="3.5" fill="url(#sparkGrad)" filter="url(#lightning)">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.4s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="62" cy="90" r="1" fill="#F59E0B">
-      <animate attributeName="opacity" values="0.2;1;0.2" dur="0.6s" repeatCount="indefinite"/>
+    
+    <!-- Micro detail sparks -->
+    <circle cx="116" cy="150" r="2" fill="#FFFBEB">
+      <animate attributeName="opacity" values="0;1;0" dur="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="144" cy="164" r="3" fill="#FEF08A">
+      <animate attributeName="opacity" values="0.1;0.9;0.1" dur="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="124" cy="180" r="2" fill="#F59E0B">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="0.5s" repeatCount="indefinite"/>
     </circle>
   </g>
   
-  <!-- MYSTICAL CODE SYMBOLS emerging from forge -->
-  <g opacity="0.7" filter="url(#forgeGlow)">
-    <text x="35" y="45" font-family="'Fira Code', monospace" font-size="12" fill="#60A5FA" font-weight="bold">
+  <!-- MYSTICAL CODE SYMBOLS with enhanced glow -->
+  <g opacity="0.8" filter="url(#forgeGlow)">
+    <text x="70" y="90" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="24" fill="#60A5FA" font-weight="bold">
       <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
       {}
     </text>
-    <text x="85" y="50" font-family="'Fira Code', monospace" font-size="10" fill="#34D399" font-weight="bold">
+    <text x="170" y="100" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="20" fill="#34D399" font-weight="bold">
       <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite"/>
       &lt;/&gt;
     </text>
-    <text x="95" y="70" font-family="'Fira Code', monospace" font-size="8" fill="#F472B6" font-weight="bold">
+    <text x="190" y="140" font-family="'Fira Code', 'JetBrains Mono', monospace" font-size="16" fill="#F472B6" font-weight="bold">
       <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
       []
     </text>
+    <!-- Additional code symbols -->
+    <text x="50" y="120" font-family="'Fira Code', monospace" font-size="14" fill="#A78BFA" font-weight="bold">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="2.5s" repeatCount="indefinite"/>
+      ()
+    </text>
   </g>
   
-  <!-- ENERGY FLOW from cloud to forge -->
-  <g opacity="0.6">
-    <path d="M64 72 Q50 78 64 85" stroke="#7DD3FC" stroke-width="2" fill="none" stroke-dasharray="5,5">
-      <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+  <!-- DIVINE ENERGY FLOW from cloud to forge -->
+  <g opacity="0.7" filter="url(#energy)">
+    <path d="M128 144 Q100 156 128 170" stroke="#7DD3FC" stroke-width="4" fill="none" stroke-dasharray="10,10">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1s" repeatCount="indefinite"/>
     </path>
-    <path d="M64 72 Q78 78 64 85" stroke="#0EA5E9" stroke-width="2" fill="none" stroke-dasharray="3,3">
-      <animate attributeName="stroke-dashoffset" values="0;6" dur="0.8s" repeatCount="indefinite"/>
+    <path d="M128 144 Q156 156 128 170" stroke="#0EA5E9" stroke-width="4" fill="none" stroke-dasharray="6,6">
+      <animate attributeName="stroke-dashoffset" values="0;12" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+    <!-- Central energy core -->
+    <path d="M128 144 L128 170" stroke="#F0F9FF" stroke-width="2" fill="none" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"/>
     </path>
   </g>
   
-  <!-- LEGENDARY HIGHLIGHT on cloud -->
-  <ellipse cx="55" cy="45" rx="15" ry="8" fill="white" opacity="0.3" transform="rotate(-15 55 45)"/>
+  <!-- LEGENDARY CLOUD HIGHLIGHTS -->
+  <ellipse cx="110" cy="90" rx="30" ry="16" fill="white" opacity="0.3" transform="rotate(-15 110 90)"/>
+  <ellipse cx="150" cy="85" rx="20" ry="10" fill="white" opacity="0.2" transform="rotate(10 150 85)"/>
   
-  <!-- PREMIUM BORDER RING -->
-  <circle cx="64" cy="64" r="62" stroke="url(#cloudMaster)" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- PREMIUM BORDER EFFECTS -->
+  <circle cx="128" cy="128" r="124" stroke="url(#cloudMaster)" stroke-width="3" fill="none" opacity="0.4"/>
+  <circle cx="128" cy="128" r="120" stroke="url(#sparkGrad)" stroke-width="1" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
 </svg>
 
