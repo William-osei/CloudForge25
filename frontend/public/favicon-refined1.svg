@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cloud gradient -->
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    <!-- Shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#1E40AF" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Cloud shape with shadow -->
+  <path d="M48 36c3 0 6-3 6-6s-3-6-6-6c-0.4-5.6-5-10-11-10-4.4 0-8.2 2.6-10 6.4C25.4 20.2 24 20 23 20c-5 0-9 4-9 9 0 1.6 0.4 3 1.2 4.2C13.4 34.4 12 36.9 12 40c0 4.4 3.6 8 8 8h28z" fill="url(#cloudGrad)" filter="url(#shadow)"/>
+  
+  <!-- Code brackets with glow -->
+  <g filter="url(#shadow)">
+    <text x="32" y="44" font-family="'Fira Code', 'Consolas', monospace" font-size="20" font-weight="bold" text-anchor="middle" fill="white" stroke="#1E40AF" stroke-width="0.5">{}</text>
+  </g>
+  
+  <!-- Refined 25 badge -->
+  <g transform="translate(50, 16)">
+    <circle cx="0" cy="0" r="8" fill="#1E40AF" stroke="white" stroke-width="1.5"/>
+    <text x="0" y="3" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">25</text>
+  </g>
+  
+  <!-- Subtle sparkle effects -->
+  <circle cx="20" cy="24" r="1.5" fill="white" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="44" cy="28" r="1" fill="white" opacity="0.6">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
